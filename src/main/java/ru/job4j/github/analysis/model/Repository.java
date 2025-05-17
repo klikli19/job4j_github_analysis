@@ -7,9 +7,11 @@ import lombok.Data;
 @Entity
 @Table(name = "repositories")
 public class Repository {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String url;
+    private String username;
 }

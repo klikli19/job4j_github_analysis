@@ -18,12 +18,12 @@ public class GitHubController {
 
     @GetMapping("/repositories")
     public List<Repository> getAllRepositories() {
-        return List.of();
+        return repositoryService.getAllRepositories();
     }
 
     @GetMapping("/commits/{name}")
     public List<RepositoryCommits> getCommits(@PathVariable(value = "name") String name) {
-        return List.of();
+        return repositoryService.getAllCommits(name);
     }
 
     @PostMapping("/repository")

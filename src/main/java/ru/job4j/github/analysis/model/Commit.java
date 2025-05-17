@@ -9,13 +9,17 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "commits")
 public class Commit {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String message;
     private String author;
     private LocalDateTime date;
+
     @ManyToOne
     @JoinColumn(name = "repository_id")
     private Repository repository;
+
+    private String sha;
 }
